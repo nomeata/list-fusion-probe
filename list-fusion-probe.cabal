@@ -16,7 +16,9 @@ tested-with:         GHC ==7.6
 
 library
   exposed-modules:     Data.List.Fusion.Probe
-  build-depends:       base ==4.6.*
+  build-depends:       base == 4.2.* || == 4.3.* || == 4.4.* ||
+                             == 4.5.* || == 4.6.* || == 4.7.*
+
 
 test-suite test
   Type:
@@ -26,7 +28,8 @@ test-suite test
   Main-is:
     Test.hs
   Build-depends:
-      base == 4.6.*
+      base == 4.2.* || == 4.3.* || == 4.4.* ||
+           == 4.5.* || == 4.6.* || == 4.7.*
     , tasty == 0.7.*
     , tasty-hunit == 0.4.*
     , list-fusion-probe
