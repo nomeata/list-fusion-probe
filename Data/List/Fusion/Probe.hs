@@ -16,7 +16,7 @@ import GHC.Exts (build, augment)
 -- list fusion. If it does, this function will disappear. If not, it will throw
 -- an error at runtime.
 --
--- > main = print $ foldl (+) 0 (fuseThis [0..1000])
+-- > main = print $ foldr (+) 0 (fuseThis [0..1000])
 --
 -- Will print @Test: fuseList: List did not fuse@, while
 --
