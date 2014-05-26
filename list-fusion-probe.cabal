@@ -30,3 +30,7 @@ test-suite test
     , tasty == 0.7.*
     , tasty-hunit == 0.4.*
     , list-fusion-probe
+
+source-repository head
+    type:     git
+    location: git://github.com/nomeata/list-fusion-probe.git
