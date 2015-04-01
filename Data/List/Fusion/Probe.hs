@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {- |
    Copyright  : Copyright (C) 2014 Joachim Breitner
    License    : BSD3
@@ -11,6 +12,11 @@ module Data.List.Fusion.Probe where
 
 
 import GHC.Exts (build, augment)
+
+#if MIN_VERSION_base(4,8,0)
+import Prelude hiding (foldr)
+import GHC.OldList (foldr)
+#endif
 
 -- | This function can be wrapped around a list that should be compiled away by
 -- list fusion. If it does, this function will disappear. If not, it will throw
