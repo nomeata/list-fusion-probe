@@ -2,7 +2,7 @@ name:                list-fusion-probe
 version:             0.1.0.3
 synopsis:            testing list fusion for success
 description:         This package provides a function @fuseThis@ that can be
-                     wrapped around a flist. If that list is fused away, all is
+                     wrapped around a list. If that list is fused away, all is
                      well. If not, a runtime error will occur.
 license:             BSD3
 license-file:        LICENSE
