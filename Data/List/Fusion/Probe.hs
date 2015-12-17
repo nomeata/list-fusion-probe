@@ -29,6 +29,8 @@ import GHC.OldList (foldr)
 -- > main = print $ foldr (+) 0 (fuseThis [0..1000])
 --
 -- will print @500500@.
+--
+-- (These examples are from the time before GHC-7.10. Since then, 'foldl' fuses as well.)
 
 fuseThis :: [a] -> [a]
 fuseThis = id
