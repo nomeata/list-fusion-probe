@@ -1,5 +1,5 @@
 name:                list-fusion-probe
-version:             0.1.0.5
+version:             0.1.0.6
 synopsis:            testing list fusion for success
 description:         This package provides a function @fuseThis@ that can be
                      wrapped around a list. If that list is fused away, all is
