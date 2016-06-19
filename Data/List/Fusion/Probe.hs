@@ -33,7 +33,7 @@ import GHC.OldList (foldr)
 -- (These examples are from the time before GHC-7.10. Since then, 'foldl' fuses as well.)
 
 fuseThis :: [a] -> [a]
-fuseThis = id
+fuseThis ls = error "fuseThis: List did not fuse"
 
 {-# NOINLINE fuseThis #-}
 
@@ -45,10 +45,5 @@ fuseThis = id
 "foldr/fuseThis/augment" [~0]
     forall k z xs (g::forall b. (a->b->b) -> b -> b) .
     foldr k z (fuseThis (augment g xs)) = g k (foldr k z xs)
- #-}
-
-{-# RULES
-"fuseThis/fail" [0]
-    fuseThis = error "fuseThis: List did not fuse"
  #-}
 
